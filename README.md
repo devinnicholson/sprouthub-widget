@@ -16,7 +16,7 @@ _Your cozy GitHub contribution garden_
 ---
 
 SproutHub is a tiny, embeddable widget that visualizes your GitHub activity as a growing emoji plant.  
-Each day you commit, it grows 🌱 → 🌿 → 🌼 → 🌷 → 🌳 — a gentle reminder that your work matters.
+Each day you commit, it grows 🌱 → 🌿 → 🌼 → 🌷 → 🌳 ... a gentle reminder that your work matters.
 
 Built with a soft, lofi aesthetic and soothing animations 🍵🎧
 
@@ -59,7 +59,7 @@ Then open:
 
 ## 🚀 Deploy Your Own
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/YOUR_USERNAME/sprouthub-widget)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/devinnicholson/sprouthub-widget)
 
 ---
 
