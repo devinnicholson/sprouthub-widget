@@ -1,0 +1,35 @@
+name: Generate preview.png from live widget
+
+on:
+  schedule:
+    - cron: "0 6 * * *"  # every day at 6:00 UTC
+  workflow_dispatch:
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Playwright
+        run: |
+          npm i -D playwright
+          npx playwright install --with-deps
+
+      - name: Take screenshot of live widget
+        run: node .github/scripts/screenshot.js
+
+      - name: Commit updated previews
+        run: |
+          git config user.name "sprouthub-bot"
+          git config user.email "bot@sprouthub"
+          git add public/preview-*.png
+          git commit -m "chore: update preview images" || echo "No changes"
+          git push
+

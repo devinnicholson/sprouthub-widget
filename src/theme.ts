@@ -9,6 +9,7 @@ export function toggleTheme() {
 }
 
 export function initializeTheme() {
-  const saved = localStorage.getItem("sprouthub-theme") || "light";
+  const themeParam = new URLSearchParams(window.location.search).get("theme");
+  const saved = themeParam || localStorage.getItem("sprouthub-theme") || "light";
   document.documentElement.dataset.theme = saved;
 }
