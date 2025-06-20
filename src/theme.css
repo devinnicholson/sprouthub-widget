@@ -1,0 +1,34 @@
+:root {
+  --bg-light: #fdf6e3;
+  --bg-dark: #2e2a27;
+  --text-light: #5c3d2e;
+  --text-dark: #e9dbc5;
+  --font-family: 'Courier New', monospace;
+}
+
+.embed-container {
+  border-radius: 12px;
+  padding: 1rem;
+  width: 280px;
+  height: 200px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-family);
+}
+
+[data-theme='light'] .embed-container {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+[data-theme='dark'] .embed-container {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.theme-toggle {
+  all: unset;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
